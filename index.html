@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Little Man's Bday</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Comic Sans MS', cursive, sans-serif;
+        background: #e0f7ff;
+        color: #333;
+        overflow-x: hidden;
+    }
+    .page {
+        display: none;
+        padding: 40px;
+        min-height: 100vh;
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+    }
+    .active { display: block; }
+    h1, h2 { color: #0366d6; }
+    p { max-width: 800px; margin: 15px auto; line-height: 1.5em; text-align: left; }
+    .center-text { text-align: center !important; margin: 15px auto; }
+    .photo-dump {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 20px 0;
+    }
+    .photo-frame {
+        margin: 10px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        transition: transform 0.3s;
+        transform: rotate(0deg);
+    }
+    .photo-frame img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+    }
+    .photo-frame:hover { transform: scale(1.05) rotate(0deg); z-index: 999; }
+    .button-link {
+        display: inline-block;
+        margin: 15px;
+        padding: 10px 20px;
+        background: #0366d6;
+        color: white;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+        z-index: 10;
+        position: relative;
+    }
+    .button-link:hover { background: #024ea2; }
+    .floating-stars {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        background-image: radial-gradient(circle, #fff 1px, transparent 1px);
+        background-size: 50px 50px;
+        z-index: 0;
+        opacity: 0.3;
+    }
+    .sticker {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        background-size: cover;
+        z-index: 5;
+        animation: floatSticker 6s ease-in-out infinite;
+    }
+    @keyframes floatSticker {
+        0% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(15deg); }
+        100% { transform: translateY(0px) rotate(0deg); }
+    }
+</style>
+</head>
+<body>
+
+<div class="floating-stars"></div>
+
+<!-- Stickers -->
+<div class="sticker" style="top:10%; left:10%; background-image: url('photos/heart.png'); animation-delay: 0s;"></div>
+<div class="sticker" style="top:30%; left:80%; background-image: url('photos/star.png'); animation-delay: 2s;"></div>
+<div class="sticker" style="top:70%; left:40%; background-image: url('photos/gift.png'); animation-delay: 4s;"></div>
+<div class="sticker" style="top:50%; left:60%; background-image: url('photos/heart.png'); animation-delay: 1s;"></div>
+
+<!-- PAGE 1 -->
+<div class="page center-page-text active" id="page1">
+    <h1>HAPPY BIRTHDAY AHMAD MUZAMMIL!!</h1>
+    <p style="text-align:center;">Welcome to my little man’s special day</p>
+    <div class="photo-dump">
+        <div class="photo-frame" style="transform: rotate(-5deg);"><img src="photos/p1.jpg" alt="p1"></div>
+        <div class="photo-frame" style="transform: rotate(3deg);"><img src="photos/p2.jpg" alt="p2"></div>
+        <div class="photo-frame" style="transform: rotate(-2deg);"><img src="photos/p3.jpg" alt="p3"></div>
+    </div>
+    <a href="#" class="button-link" onclick="showPage('page2')">(click here for ur little surprise)</a>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="page2">
+    <h1>THESE ARE FOR MY SAYANGGG</h1>
+    <p class="center-text">click to open!</p>
+    <a href="#" class="button-link" onclick="showPage('page3')">📷 Camera</a>
+    <a href="#" class="button-link" onclick="showPage('page5')">✉️ Letter</a>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="page3">
+    <h1>LITTLE MOMENTS, BIG MEMORIES...</h1>
+    <div class="photo-dump">
+        <div class="photo-frame" style="transform: rotate(-4deg);"><img src="photos/p4.jpg" alt="p4"></div>
+        <div class="photo-frame" style="transform: rotate(5deg);"><img src="photos/p5.jpg" alt="p5"></div>
+        <div class="photo-frame" style="transform: rotate(-3deg);"><img src="photos/p6.jpg" alt="p6"></div>
+        <div class="photo-frame" style="transform: rotate(2deg);"><img src="photos/p7.jpg" alt="p7"></div>
+        <div class="photo-frame" style="transform: rotate(-1deg);"><img src="photos/p8.jpg" alt="p8"></div>
+    </div>
+    <a href="#" class="button-link" onclick="showPage('page4')">(lagi lagiii ~)</a>
+    <a href="#" class="button-link" onclick="showPage('page2')">(back)</a>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="page4">
+    <h1>ALL WITH MY BABY....</h1>
+    <div class="photo-dump">
+        <div class="photo-frame" style="transform: rotate(3deg);"><img src="photos/p9.jpg" alt="p9"></div>
+        <div class="photo-frame" style="transform: rotate(-4deg);"><img src="photos/p10.jpg" alt="p10"></div>
+        <div class="photo-frame" style="transform: rotate(2deg);"><img src="photos/p11.jpg" alt="p11"></div>
+        <div class="photo-frame" style="transform: rotate(-3deg);"><img src="photos/p12.jpg" alt="p12"></div>
+        <div class="photo-frame" style="transform: rotate(4deg);"><img src="photos/p13.jpg" alt="p13"></div>
+    </div>
+    <a href="#" class="button-link" onclick="showPage('page3')">(nak tengok yg tadi laa)</a>
+    <a href="#" class="button-link" onclick="showPage('page2')">(main page)</a>
+</div>
+
+<!-- PAGE 5 -->
+<div class="page" id="page5">
+    <h1>HAPPY BIRTHDAY MY LOVE!!!</h1>
+    <p style="text-align:center;">ALHAMDULILLAH, another year to celebrate! my boyfieee turns 21 today uwuuuuu ~ may Allah bless and ease everything for u, dear ❤️ semoga bertambahnya umur my sayang ni antara penyebab untuk dia menjadi insan yang lebih baik, yang sentiasa berusaha dalam menjadi yang terbaik...</p>
+    <p style="text-align:center;">so untuk kali ni, kiranya saya dah celebrate dengan sayang dua kali laaaa hihihi lurvee, semoga tahun yang akan datang pun saya tetap celebrate bday sayang saya ni, mmuahhh! doa saya untuk sayang, semoga bahagia selalu, ingat tau yang saya akan always teman my baby, I’ll be there for u anytime sayang....</p>
+    <p style="text-align:center;">saya nak type panjang tauu tapi tu laaa, saya tak rasa kesayangan saya ni rajin membaca, I know him very well but wekk nak jugakk.....</p>
+    <div class="photo-dump">
+        <div class="photo-frame" style="transform: rotate(-2deg);"><img src="photos/p14.jpg" alt="p14"></div>
+    </div>
+    <a href="#" class="button-link" onclick="showPage('page6')">(ada lagiii ~)</a>
+    <a href="#" class="button-link" onclick="showPage('page2')">(main page)</a>
+</div>
+
+<!-- PAGE 6 -->
+<div class="page" id="page6">
+    <h1>FROM ME TO MY ONE AND ONLY</h1>
+    <p style="text-align:center;">first of all, saya nak minta maaf kat sayang saya ni, saya banyak buat salah tau kat sayang, saya mengaku kadang saya ni tak pandai nak jaga hati sayang, saya banyak ikut je apa yang saya nak buat jadi untuk yang tu saya nak minta maaf sangat sangat</p>
+    <p style="text-align:center;">kadang tu sebab saya nak attention sayang je tapi tu laaa macam salah kann, jadi banyak gaduh pulak kadang-kadang, sorry tau baby sayaaa, tak janji tapi saya cuba laa untuk control hihihi sayang tu haaa, rajin rajin tauu layan baby awak yang manja ni ngeee ngeee</p>
+    <p style="text-align:center;">next saya nak cakap, please pleaseeee apa pun jadi tolong sangat sangat jangan cakap benda yang bukan bukan, kalau saya ada terlepas cakap, sayang  tegur je tauuu and sayang pun jangan laaa cakap benda yang negative, tak sukaaa, saya nak kita happy happy je</p>
+    <p style="text-align:center;">saya nak kita dua build our future together, yes In Syaa Allah sampai kita kahwin, sampai ada keturunan, sampai semua laa, saya nak build future saya dengan sayang and saya harap sayang pun nak macam tu jugak ❤️</p>
+
+<div class="photo-dump">
+        <div class="photo-frame" style="transform: rotate(3deg);"><img src="photos/p15.jpg" alt="p15"></div>
+        <div class="photo-frame" style="transform: rotate(-4deg);"><img src="photos/p16.jpg" alt="p16"></div>
+    </div>
+    <a href="#" class="button-link" onclick="showPage('page7')">(aipp, ada lagi nii ~)</a>
+    <a href="#" class="button-link" onclick="showPage('page5')">(back)</a>
+    <a href="#" class="button-link" onclick="showPage('page2')">(main page)</a>
+</div>
+
+<!-- PAGE 7 -->
+<div class="page" id="page7">
+    <h1>ENJOY UR DAY MY LOVE</h1>
+    <p style="text-align:center;">last but not least, I hope my sayang enjoy every moments bila sayang dengan saya, and saya harap sangat kita boleh buat banyak lagi benda sama sama, saya nak explore dunia saya ni dengan my baby hihihihi so jangan bosan tauuu dengan saya sebab saya always happy bila dapat spend time dengan kesayangan saya yang handsome ni ❤️</p>
+    <p style="text-align:center;">enjoy ur day sayanggg!!! and of course every dayyy is ur day so baby sayang kena enjoy je tauu but jangan lupa gewe dia yg canteks lagi comeyy ni, ouhh lupa saya nak cakap jugak saya harap sayang saya terima la ehh hadiah saya beri, ada maksud tauu hadiah tuu tapi nanti bila sayang dh buka sayang pergi tanya ehh apa maksud dia, saya mampu beri tu je untuk sayang saya, mungkin tak sehebat yang lain tapi saya cuba apa yang saya mampu untuk kesayangan saya, so againnn HAPPY BIRTHDAY MY LITTLE MANNN!!!</p>
+    I LOVE YOU SO MUCHH MY HANDSOME MAN ❤️</p>
+    <div class="photo-dump">
+        <div class="photo-frame" style="transform: rotate(-3deg);"><img src="photos/p17.jpg" alt="p17"></div>
+        <div class="photo-frame" style="transform: rotate(4deg);"><img src="photos/p18.jpg" alt="p18"></div>
+    </div>
+    <a href="#" class="button-link" onclick="showPage('page8')">(special for u)</a>
+    <a href="#" class="button-link" onclick="showPage('page6')">(back)</a>
+    <a href="#" class="button-link" onclick="showPage('page2')">(main page)</a>
+</div>
+
+<!-- PAGE 8 -->
+<div class="page" id="page8">
+    <h1>SPECIAL FOR MY SAYANG</h1>
+    <p style="text-align:center;">part ni special for my sayang yang graduated hari tu, walaupun saya kenal sayang bukan dari awal sayang sambung diploma tapi saya tahu betapa sayang struggle nak sambung belajar jadi saya bangga sangat sangat tauuu bila tengok sayang dah sampai tahap ni</p>
+    <p style="text-align:center;">alhamdulillah, semoga pencapaian sayang ni menjadi titik langkah untuk sayang sentiasa bersemangat nak menuntut ilmu dan saya kat sini akan tolong sayang selagi saya mampu, so dont give up and keep it up, okayy my loveee?!</p>
+    <p style="text-align:center;">untuk degree ni saya nak tengok sayang saya berjaya, bukan degree je tapi saya nak sayang berjaya dunia akhirat and saya percaya yang sayang saya boleh buat semua tu, go goo my babyyy! kejayaan sayang, kejayaan untuk saya jugak dan saya always akan doakan yang terbaik untuk sayang, jadi jangan pernah give up tauu! semoga segala cita-cita dan impian sayang tercapaiii, nanti jangan lupa saya ❤️</p>
+    <div class="photo-dump">
+        <div class="photo-frame" style="transform: rotate(2deg);"><img src="photos/p19.jpg" alt="p19"></div>
+        <div class="photo-frame" style="transform: rotate(-3deg);"><img src="photos/p20.jpg" alt="p20"></div>
+    </div>
+    <a href="#" class="button-link" onclick="showPage('page7')">(back)</a>
+    <a href="#" class="button-link" onclick="showPage('page2')">(main page)</a>
+</div>
+
+<script>
+    function showPage(pageId) {
+        const pages = document.querySelectorAll('.page');
+        pages.forEach(page => page.classList.remove('active'));
+        document.getElementById(pageId).classList.add('active');
+        window.scrollTo(0,0);
+    }
+</script>
+
+</body>
+</html>
